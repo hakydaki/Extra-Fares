@@ -1,0 +1,8 @@
+{
+	"parent": "extrafares:block/pie",
+	"textures": {
+		"side": "extrafares:block/pie_side",
+		"top": "extrafares:block/lime_pie_top",
+		"bottom": "extrafares:block/pie_bottom"
+	}
+}

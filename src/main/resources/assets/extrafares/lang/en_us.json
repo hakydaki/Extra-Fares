@@ -1,3 +1,17 @@
 {
-  "block.extrafares."
+  "block.extrafares.flowering_lime_leaves": "Flowering Lime Leaves",
+  "block.extrafares.hanging_lime": "Lime",
+  "block.extrafares.lime_block": "Lime Block",
+  "block.extrafares.lime_leaves": "Lime Leaves",
+  "block.extrafares.lime_log": "Lime Log",
+  "block.extrafares.lime_pie": "Lime Pie",
+  "block.extrafares.lime_sapling": "Lime Sapling",
+  "block.extrafares.lime_wood": "Lime Wood",
+  "block.extrafares.potted_lime_sapling": "Potted Lime Sapling",
+  "block.extrafares.stripped_lime_log": "Stripped Lime Log",
+  "block.extrafares.stripped_lime_wood": "Stripped Lime Wood",
+  "item.extrafares.candied_lime": "Candied Lime",
+  "item.extrafares.lime": "Lime",
+  "item.extrafares.lime_compote_jar": "Sprite Jar",
+
 }

@@ -1,0 +1,7 @@
+{
+	"parent": "extrafares:block/leaves_with_overlay",
+	"textures": {
+		"all": "extrafares:block/lime_leaves",
+		"overlay": "extrafares:block/flowering_lime_leaves"
+	}
+}

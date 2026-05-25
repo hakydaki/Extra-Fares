@@ -1,9 +1,9 @@
 {
-	"parent": "extrafares:block/pie_2",
+	"parent": "bountifulfares:block/pie_2",
 	"textures": {
-		"side": "extrafares:block/pie_side",
+		"side": "bountifulfares:block/pie_side",
 		"top": "extrafares:block/lime_pie_top",
-		"bottom": "extrafares:block/pie_bottom",
+		"bottom": "bountifulfares:block/pie_bottom",
 		"inside": "extrafares:block/lime_pie_inside"
 	}
 }

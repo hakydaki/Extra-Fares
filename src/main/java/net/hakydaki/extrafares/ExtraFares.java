@@ -1,5 +1,8 @@
 package net.hakydaki.extrafares;
 
+import net.hakydaki.extrafares.content.ExtraFaresBlocks;
+import net.hakydaki.extrafares.content.ExtraFaresItems;
+import net.minecraft.world.item.CreativeModeTab;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -20,12 +23,17 @@ public class ExtraFares {
     public static final String MOD_ID = "extrafares";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    public static void init() {
+        ExtraFaresBlocks.registerBlocks();
+        ExtraFaresItems.registerItems();
+    }
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public ExtraFares(IEventBus modEventBus, ModContainer modContainer) {
+
+        init();
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -34,7 +42,6 @@ public class ExtraFares {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -43,7 +50,6 @@ public class ExtraFares {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,5 +1,6 @@
 package net.hakydaki.extrafares.content;
 
+import net.hakydaki.extrafares.ExtraFares;
 import net.hecco.bountifulfares.BountifulFares;
 import net.hecco.bountifulfares.definition.item.custom.*;
 import net.hecco.bountifulfares.registry.content.BFEffects;
@@ -21,6 +22,9 @@ import static net.hecco.bountifulfares.registry.content.BFItems.CUP;
 
 public class ExtraFaresItems {
 
+    public static void registerItems() {
+    }
+
     //Fruit Items
     public static final Supplier<Item> LIME = registerItem("lime", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
     //Candied Fruits
@@ -30,6 +34,6 @@ public class ExtraFaresItems {
 
     //helper methods
     private static Supplier<Item> registerItem(String id, Supplier<Item> registry) {
-        return NLServices.REGISTRY.register(BountifulFares.MOD_ID, id, BuiltInRegistries.ITEM, registry);
+        return NLServices.REGISTRY.register(ExtraFares.MOD_ID, id, BuiltInRegistries.ITEM, registry);
     }
 }

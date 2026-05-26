@@ -1,7 +1,7 @@
 {
-	"parent": "extrafares:block/leaves_with_overlay",
+	"parent": "bountifulfares:block/leaves_with_overlay",
 	"textures": {
-		"all": "extrafares:block/lime_leaves",
-		"overlay": "extrafares:block/flowering_lime_leaves"
+		"all": "bountifulfares:block/lemon_leaves",
+		"overlay": "bountifulfares:block/flowering_lemon_leaves"
 	}
 }

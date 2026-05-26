@@ -1,5 +1,5 @@
 {
-  "parent": "bountifulfares:item/template_fruit_log",
+  "parent": "bountifulfares:block/template_fruit_log",
   "textures": {
     "texture": "extrafares:block/stripped_lime_log"
   }

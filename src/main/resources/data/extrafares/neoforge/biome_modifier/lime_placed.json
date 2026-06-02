@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#extrafares:has_lime_trees",
+  "features": [
+    "extrafares:lime_placed"
+  ],
+  "step": "vegetal_decoration"
+}

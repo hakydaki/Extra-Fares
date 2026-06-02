@@ -1,6 +1,8 @@
 package net.hakydaki.extrafares.content;
 
 import net.hakydaki.extrafares.ExtraFares;
+import net.hakydaki.extrafares.content.definition.HangingLimeBlock;
+import net.hakydaki.extrafares.content.gen.ExtraFaresSaplingGenerators;
 import net.hecco.bountifulfares.definition.block.custom.*;
 import net.hecco.bountifulfares.registry.content.BFBlocks;
 import net.hecco.bountifulfares.registry.misc.BFSaplingGenerators;
@@ -31,15 +33,15 @@ public class ExtraFaresBlocks {
     //Tree stripped planks
     public static final Supplier<Block> STRIPPED_LIME_WOOD = registerBlock("stripped_lime_wood", () -> new StrippedFruitLogBlock(BlockBehaviour.Properties.ofFullCopy(BFBlocks.STRIPPED_APPLE_WOOD.get())));
     //Hanging fruits
-    public static final Supplier<Block> HANGING_LIME = registerBlockNoItem("hanging_lime", () -> new HangingLemonBlock(BlockBehaviour.Properties.ofFullCopy(BFBlocks.HANGING_APPLE.get())));
+    public static final Supplier<Block> HANGING_LIME = registerBlockNoItem("hanging_lime", () -> new HangingLimeBlock(BlockBehaviour.Properties.ofFullCopy(BFBlocks.HANGING_APPLE.get())));
     //Fruit leaves — now correctly references HANGING_LIME instead of HANGING_LEMON
     public static final Supplier<Block> LIME_LEAVES = registerBlock("lime_leaves", () -> new FruitLeavesBlock(HANGING_LIME.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(BFBlocks.APPLE_LEAVES.get())));
     //Flowering fruit leaves
     public static final Supplier<Block> FLOWERING_LIME_LEAVES = registerBlock("flowering_lime_leaves", () -> new FruitLeavesBlock(HANGING_LIME.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(BFBlocks.FLOWERING_APPLE_LEAVES.get())));
     //Tree saplings
-    public static final Supplier<Block> LIME_SAPLING = registerBlock("lime_sapling", () -> new PublicSaplingBlock(BFSaplingGenerators.LEMON_SAPLING_GENERATOR, BlockBehaviour.Properties.ofFullCopy(BFBlocks.APPLE_SAPLING.get())));
+    public static final Supplier<Block> LIME_SAPLING = registerBlock("lime_sapling", () -> new PublicSaplingBlock(ExtraFaresSaplingGenerators.LIME_SAPLING_GENERATOR, BlockBehaviour.Properties.ofFullCopy(BFBlocks.APPLE_SAPLING.get())));
     //Potted saplings
-    public static final Supplier<Block> POTTED_LIME_SAPLING = registerBlockNoItem("potted_lime_sapling", () -> new FlowerPotBlock(BFBlocks.LEMON_SAPLING.get(), BlockBehaviour.Properties.ofFullCopy(BFBlocks.POTTED_APPLE_SAPLING.get())));
+    public static final Supplier<Block> POTTED_LIME_SAPLING = registerBlockNoItem("potted_lime_sapling", () -> new FlowerPotBlock(ExtraFaresBlocks.LIME_SAPLING.get(), BlockBehaviour.Properties.ofFullCopy(BFBlocks.POTTED_APPLE_SAPLING.get())));
     //Fruit blocks
     public static final Supplier<Block> LIME_BLOCK = registerBlock("lime_block", () -> new LemonBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_GREEN).strength(0.5f).instrument(NoteBlockInstrument.DIDGERIDOO).sound(SoundType.WOOD)));
     //Pies
